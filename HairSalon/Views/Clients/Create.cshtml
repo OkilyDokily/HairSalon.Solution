@@ -6,10 +6,10 @@
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.FirstName)
+  @Html.Label("First Name")
   @Html.TextBoxFor(model => model.FirstName, new{@class = "form-control"})
 
-  @Html.LabelFor(model => model.LastName)
+  @Html.Label("Last Name")
   @Html.TextBoxFor(model => model.LastName, new{@class = "form-control"})
 
   @Html.DropDownList("StylistId");
