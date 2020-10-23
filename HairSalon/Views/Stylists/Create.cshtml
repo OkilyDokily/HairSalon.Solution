@@ -1,0 +1,16 @@
+@model HairSalon.Models.Stylist
+
+@{
+  Layout = "_Layout";
+}
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.FirstName)
+  @Html.TextBoxFor(model => model.FirstName, new{@class = "form-control"})
+
+  @Html.LabelFor(model => model.LastName)
+  @Html.TextBoxFor(model => model.LastName, new{@class = "form-control"})
+
+  <input type="submit" class="btn btn-success">
+}
