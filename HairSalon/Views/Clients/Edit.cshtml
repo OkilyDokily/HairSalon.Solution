@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client;
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.ClientId)
+  @Html.LabelFor(model => model.FirstName)
+  @Html.EditorFor(model => model.FirstName, new{@class = "form-control"})
+
+  @Html.LabelFor(model => model.LastName)
+  @Html.EditorFor(model => model.LastName, new{@class = "form-control"})
+
+  @Html.DropDownList("StylistId");
+
+  <input type="submit" class="btn btn-success">
+}

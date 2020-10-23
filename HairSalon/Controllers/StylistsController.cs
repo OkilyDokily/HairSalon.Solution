@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace HairSalon.Controllers
 {
@@ -49,6 +50,20 @@ namespace HairSalon.Controllers
     {
       Stylist stylist = _db.Stylists.FirstOrDefault(x => x.StylistId == id);
       _db.Stylists.Remove(stylist);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Edit(int id)
+    {
+      Stylist stylist = _db.Stylists.FirstOrDefault(x => x.StylistId == id);
+      return View(stylist);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Stylist stylist)
+    {
+      _db.Entry(stylist).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
