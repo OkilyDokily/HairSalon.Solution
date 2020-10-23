@@ -10,3 +10,5 @@
 {
   <p>@Html.ActionLink(client.FirstName + " " + client.LastName, "Details", "Clients", new {id =client.ClientId})</p>
 }
+
+<p>@Html.ActionLink("Delete this stylist","Delete",new {id = @Model.StylistId})</p>
