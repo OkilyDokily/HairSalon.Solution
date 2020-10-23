@@ -5,18 +5,18 @@ using System.Linq;
 
 namespace HairSalon.Controllers
 {
-    public class ClientsController : Controller
+    public class StylistsController : Controller
     {
         private readonly HairSalonContext _db;
-        public ClientsController(HairSalonContext db)
+        public StylistsController(HairSalonContext db)
         {
             _db = db;
         }
 
         public ActionResult Index()
         {
-            List<Client> clients = _db.Clients.ToList();
-            return View(clients);
+            List<Stylist> stylists = _db.Stylists.ToList();
+            return View(stylists);
         }
     }
 }
