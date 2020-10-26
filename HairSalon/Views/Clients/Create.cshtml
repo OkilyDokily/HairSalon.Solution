@@ -4,15 +4,22 @@
   Layout = "_Layout";
 }
 
-@using (Html.BeginForm())
+@if (ViewBag.AnyStylists == true)
 {
-  @Html.Label("First Name")
-  @Html.TextBoxFor(model => model.FirstName, new{@class = "form-control"})
+  @using (Html.BeginForm())
+  {
+    @Html.Label("First Name")
+    @Html.TextBoxFor(model => model.FirstName, new{@class = "form-control"})
 
-  @Html.Label("Last Name")
-  @Html.TextBoxFor(model => model.LastName, new{@class = "form-control"})
+    @Html.Label("Last Name")
+    @Html.TextBoxFor(model => model.LastName, new{@class = "form-control"})
 
-  @Html.DropDownList("StylistId");
+    @Html.DropDownList("StylistId");
 
-  <input type="submit" class="btn btn-success">
+    <input type="submit" class="btn btn-success">
+  }
+}
+else
+{
+  <p>You need to add a stylist before you can add a client.</p>
 }
