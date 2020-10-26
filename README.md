@@ -13,11 +13,17 @@ _A hair salon with a one to many client to stylist relation_
      
 ## Setup/Installation Requirements
 * Install dotnet core from https://dotnet.microsoft.com/download
+* Install MySql and MySql Workbench. Consider this handy reference. https://www.learnhowtoprogram.com/fidgetech-3-c-and-net/3-0-lessons-1-5-getting-started-with-c/3-0-0-04-installing-and-configuring-mysql
 * Clone/download the repo
+* In MySql Workbench go to Navigator panel and click on the Administration tab
+* Then click Data Import/Restore 
+* Click Import from Self-Contained File and then select the "matthew_ledoux.sql" file from the top level of the repo. 
+* Click start import
 * Navigate to the HairSalon folder
 * type 'dotnet restore'
 * Run "dotnet run" to open the program
 * Follow the instructions within the app
+
 ## Specs
 
 
