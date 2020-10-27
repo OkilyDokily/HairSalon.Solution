@@ -18,7 +18,7 @@ _A hair salon with a one to many client to stylist relation_
 * In MySql Workbench go to Navigator panel and click on the Administration tab
 * Then click Data Import/Restore 
 * Click Import from Self-Contained File and then select the "matthew_ledoux.sql" file from the top level of the repo. 
-* Under Default Schema add "matthew_ledoux" and then Click New 
+* Under Default Schema click New and then type "matthew_ledoux" in the prompt
 * Click start import
 * Navigate to the HairSalon folder
 * type 'dotnet restore'
